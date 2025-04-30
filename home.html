@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html> 
 <html lang="en">
 <head>
@@ -10,14 +12,23 @@
             padding: 0;
             font-family: 'Pacifico', Arial, Helvetica, sans-serif;
             color: rgb(236, 221, 208);
-            background: url('https://img.freepik.com/premium-photo/book-stack-library-room-blurred-bookshelf-background_42691-514.jpg') no-repeat center center fixed;
-            background-size: cover;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            overflow: hidden;
+        }
+
+        video.background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
         marquee {
@@ -91,6 +102,11 @@
     </style>
 </head>
 <body>
+    <video autoplay muted loop class="background-video">
+        <source src="https://video-previews.elements.envatousercontent.com/h264-video-previews/15ab5634-ea75-4a4a-8d8d-9ad088a786b6/48069928.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <marquee behavior="scroll" direction="left">
         📚Step into the world of stories with API Online Bookstore🔖 .
     </marquee>
@@ -100,4 +116,4 @@
         <a href="prologin.html">Explore Our Collection</a>
     </div>
 </body>
-</html>
+</html> 
