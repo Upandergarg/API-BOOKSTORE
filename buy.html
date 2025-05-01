@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment and Order Tracking</title>
+    <link rel="stylesheet" href="BUY.CSS"/>
+        
+</head>
+<body>
+    <header>
+        Payment and Order Tracking
+    </header>
+
+    <main>
+        <!-- Address Form Section -->
+        <div class="section">
+            <h2>Enter Your Address</h2>
+            <form id="address-form" class="address-form">
+                <label for="address-line1">Address Line 1</label>
+                <input type="text" id="address-line1" name="address-line1" required placeholder="Enter your street address" />
+
+                <label for="address-line2">Address Line 2</label>
+                <input type="text" id="address-line2" name="address-line2" placeholder="Apartment, Suite, etc." />
+
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required placeholder="Enter your city" />
+
+                <label for="zip-code">Zip Code</label>
+                <input type="text" id="zip-code" name="zip-code" required placeholder="Enter your zip code" />
+
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" required placeholder="Enter your country" />
+
+                <button type="button" class="btn" onclick="submitAddress()">Submit Address</button>
+            </form>
+        </div>
+
+        <!-- Payment Options Section -->
+        <div class="section">
+            <h2>Choose Your Payment Method</h2>
+            <div class="payment-options">
+                <label>
+                    <input type="radio" name="payment-method" value="cod"> Cash on Delivery
+                </label>
+                <label>
+                    <input type="radio" name="payment-method" value="card"> Online Payment (Credit/Debit Card)
+                </label>
+            </div>
+            <button class="btn" onclick="processPayment()">Pay</button>
+        </div>
+
+        <!-- Order Status Section -->
+        <div class="section order-status" id="order-status-section" style="display: none;">
+            <h2>Order Tracking</h2>
+            <p id="payment-status"></p>
+            <p>Track your order status here: <span class="success-message">Processing</span></p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 API BOOKSTORE. All rights reserved.
+    </footer>
+    <script src="BUY.JS"></script>
+
+
+</body>
+</html>
